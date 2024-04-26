@@ -2,7 +2,7 @@ param(
   [string]$Tenant,
   [string]$Token
 )
-Function Start ([string]$Tenant,[string]$Token)
+Function Download_Install ([string]$Tenant,[string]$Token)
 {
     Try
     {
@@ -78,4 +78,4 @@ Function Test_Trellix_Connection ([string]$TrellixHost)
         Exit 1;
     }
 }
-Start "$Tenant" "$Token"
+Download_Install "$Tenant" "$Token"
