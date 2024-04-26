@@ -60,7 +60,6 @@ Function Start ([string]$Tenant,[string]$Token)
      Exit 1;
     }
 }
-
 Function Test_Trellix_Connection ([string]$TrellixHost)
 {
     Try
@@ -79,5 +78,4 @@ Function Test_Trellix_Connection ([string]$TrellixHost)
         Exit 1;
     }
 }
-
 Start "$Tenant" "$Token"
