@@ -36,12 +36,22 @@ Ej:
   Ej:
 ![image](https://github.com/marioruiz2811/AutoDeploy-Trellix-Agent/assets/71531721/6c1de34d-c7c6-4e23-af3c-283d7e7c53dc)
 
-7. Open again the PowerShell Scripts properties and add the script copied above, add the Tenant and Token values obtained in step 4 as arguments..
+7. Open again the PowerShell Scripts properties and add the script copied above, add the Tenant and Token values obtained in step 4 as arguments.
 
    Ej: "-Tenant ui-usw001.manage.trellix.com -Token a0e090489225e81cc6da39394cc58ebb22381394"
 ![image](https://github.com/marioruiz2811/AutoDeploy-Trellix-Agent/assets/71531721/8e5c099a-c2db-415a-a27c-d2c83484dd63)
 
-8. On the Client PC that has the GPO applied we verify that the policy is assigned, it will appear as if it has never been executed..
+8. On the Client PC that has the GPO applied we verify that the policy is assigned, it will appear as if it has never been executed.
     
-    Ej:
+    Force Update GPO Policies: gpupdate /force
+    Show GPO Result applied in PC Client: gpresult /z /scope computer | Select-String "Startup Script" -Context 0,6
    ![image](https://github.com/marioruiz2811/AutoDeploy-Trellix-Agent/assets/71531721/3f607b8a-db34-4fa3-aef8-6d502f8f7d28)
+
+   Verify that the Agent is not installed. The McAfee directory does not exist either.
+
+   Command: Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -eq "Trellix Agent" }
+  ![image](https://github.com/marioruiz2811/AutoDeploy-Trellix-Agent/assets/71531721/cc30e73a-caa9-4389-8d90-681db7dfa64f)
+
+10. Apagar la PC Cliente y luego encenderla, cuando windows inicie el script descargara el Agente de Trellix y procedera a instalarlo, esto puede tardar hasta 5 minutos, depende de la conexion a internet de la PC Client.
+
+    
