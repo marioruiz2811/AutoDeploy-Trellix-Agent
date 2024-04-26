@@ -21,3 +21,5 @@ Get download link: The first part will consist of setting up a TrellxSmartAgent 
 ![IMG2](https://github.com/marioruiz2811/AutoDeploy-Trellix-Agent/assets/71531721/a7567694-ccff-4eaa-9126-c341980b48c7)
 
 Ingresamos al Domain Controller, creamos una politica para despliegue de agente e ingresamos a "Computer Configuration>Policies>Windows Settings>Scripts (Startup/Shutdown)/Startup" aqui en la pestaña de "PowerShell Scripts" abrimos la ubicacion los script de Startup.
+![image](https://github.com/marioruiz2811/AutoDeploy-Trellix-Agent/assets/71531721/78116c8a-3fda-41eb-b337-a1590c4692fe)
+
