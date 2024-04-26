@@ -31,7 +31,7 @@ Ej:
    Ej:
 ![image](https://github.com/marioruiz2811/AutoDeploy-Trellix-Agent/assets/71531721/78116c8a-3fda-41eb-b337-a1590c4692fe)
 
-  When the Startup Scripts window opens, paste the script downloaded in step 6.
+  When the Startup Scripts window opens, paste the script downloaded in step 5.
   
   Ej:
 ![image](https://github.com/marioruiz2811/AutoDeploy-Trellix-Agent/assets/71531721/6c1de34d-c7c6-4e23-af3c-283d7e7c53dc)
