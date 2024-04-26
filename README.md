@@ -52,6 +52,10 @@ Ej:
    Command: Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -eq "Trellix Agent" }
   ![image](https://github.com/marioruiz2811/AutoDeploy-Trellix-Agent/assets/71531721/cc30e73a-caa9-4389-8d90-681db7dfa64f)
 
-10. Apagar la PC Cliente y luego encenderla, cuando windows inicie el script descargara el Agente de Trellix y procedera a instalarlo, esto puede tardar hasta 5 minutos, depende de la conexion a internet de la PC Client.
+10. Turn off the Client PC and then turn it on, when windows starts the script will download the Trellix Agent and proceed to install it, this may take up to 5 minutes depending on the Client PC internet connection.
+    
+The agent will connect to ePO SaaS and download the assigned policies and applications:
+![image](https://github.com/marioruiz2811/AutoDeploy-Trellix-Agent/assets/71531721/f2161f03-2903-4dc6-8bdb-20e4d7605b53)
+
 
     
