@@ -4,3 +4,4 @@ Este procedimiento es necesario cuando se usa Trellix ePO SaaS, donde no hay for
 
 Primero:
 Generar el enlace de descarga de Trellix Agent: En ePO SaaS creamos un 
+IMG1
