@@ -4,4 +4,5 @@ Este procedimiento es necesario cuando se usa Trellix ePO SaaS, donde no hay for
 
 Primero:
 Generar el enlace de descarga de Trellix Agent: En ePO SaaS creamos un 
-IMG1
+
+![IMG1](https://github.com/marioruiz2811/Trellix-Smart-Agent/assets/71531721/4c1dff38-cda8-421d-969a-aff21e37c244)
