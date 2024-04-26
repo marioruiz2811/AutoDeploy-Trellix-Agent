@@ -12,7 +12,7 @@ Function Start ([string]$Tenant,[string]$Token)
         }
         else
         {
-            $Installer = "$env:ProgramData\TrellixSmartInstaller.exe"
+            $TrellixInstaller = "$env:ProgramData\TrellixSmartInstaller.exe"
             [URI]$API_URL = "https://" + $Tenant +"/ComputerMgmt/agentPackageDownload/TrellixSmartInstall.download?token=" + $Token;
             $TrellixAgentInstalled = Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -eq "Trellix Agent" };
             $McAfeeAgentInstalled = Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -eq "McAfee Agent" };
@@ -26,7 +26,7 @@ Function Start ([string]$Tenant,[string]$Token)
                         {
                             Remove-Item $TrellixInstaller -Force;
                         }
-                        Start-BitsTransfer -Source $TrellixURL -Destination $TrellixInstaller;
+                        Start-BitsTransfer -Source $API_URL -Destination $TrellixInstaller;
 
                         If (Test-Path -Path $TrellixInstaller -PathType Leaf )
                         {
@@ -47,9 +47,9 @@ Function Start ([string]$Tenant,[string]$Token)
             }
             else
             {
-                If ( Test-Path -Path $Installer -PathType Leaf )
+                If ( Test-Path -Path $TrellixInstaller -PathType Leaf )
                 {
-                    Remove-Item $Installer -Force;
+                    Remove-Item $TrellixInstaller -Force;
                     Exit 0;
                 }
             }
