@@ -1,4 +1,4 @@
-# AutoDeploy Trellix Agent
+# Auto Deploymet Trellix Agent
 Installing Trellix Agent from Active Directory. This procedure is necessary when using Trellix ePO SaaS, where there is no way to provision the Trellix Agent to new PCs newly added to the domain.
 
 Get download link: The first part will consist of setting up a TrellxSmartAgent download link in ePO SaaS:
