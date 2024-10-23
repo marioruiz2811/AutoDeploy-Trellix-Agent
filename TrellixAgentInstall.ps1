@@ -30,11 +30,8 @@ Function Download_Install ([string]$Tenant,[string]$Token)
 
                         If (Test-Path -Path $TrellixInstaller -PathType Leaf )
                         {
-                            If ( Test-Path -Path $TrellixInstaller -PathType Leaf )
-                            {
-                                &  $TrellixInstaller -s -f;
-                                Exit 0;
-                            }
+                            &  $TrellixInstaller -s -f;
+                            Exit 0;
                         }
                         Break;
                     }
